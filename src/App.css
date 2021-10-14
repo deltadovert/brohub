@@ -2,37 +2,129 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.burger-box {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  padding-left: 20px;
+  padding-right: 20px;  
+  background-color: rgb(86, 43, 156);
+  z-index: 1000;
+  border-right: 5px solid rgb(58, 29, 104);
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 5s linear;
   }
 }
 
-.App-header {
+@media (prefers-reduced-motion: no-preference) {
+  .App-menu-in {
+    animation: menu-slide-in 1 0.2s linear;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-menu-out {
+    animation: menu-slide-out 1 0.2s linear;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .banner {
+    animation: rotate-banner infinite 2s linear;
+  }
+}
+
+.banner {
+  display: flex;
+  flex-direction: row;
+}
+
+.App-layout {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 1000px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  overflow: hidden;
+}
+
+.bro-hub-logo {
+  font-size: 40px;
+  font-family: 'Oi', cursive;
+  margin-left: 90px;
+  overflow: hidden;
+  width: 300px;
+  display: flex;
+  justify-content: left;
+  position: relative;
+  left: -390px;
+}
+
+.App-header {
+  height: 90px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: rgb(86, 43, 156);
+  align-items: center;
+}
+
+.App-menu-in {
+  height: 210px; 
+  width: 150px;
+  background-color: rgb(86, 43, 156);
+  border-bottom: 5px solid rgb(58, 29, 104);
+  border-right: 5px solid rgb(58, 29, 104);
+  text-align: left;
+}
+
+.App-menu-out {
+  height: 210px; 
+  width: 150px;
+  background-color: rgb(86, 43, 156);
+  border-bottom: 5px solid rgb(58, 29, 104);
+  border-right: 5px solid rgb(58, 29, 104);
+  text-align: left;
+}
+
+.App-menu-text {
+  margin-left: 20px;
+  margin-top: 10px;
+  line-height: 28px;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+@keyframes menu-slide-in {
   from {
-    transform: rotate(0deg);
+    transform: translateX(-155px)
   }
   to {
-    transform: rotate(360deg);
+    transform: translateX(0px);
   }
 }
+
+@keyframes menu-slide-out {
+  from {
+    transform: translateX(0px)
+  }
+  to {
+    transform: translateX(-155px);
+  }
+}
+
+@keyframes rotate-banner {
+  from {
+    transform: translateX(0px)
+  }
+  to {
+    transform: translateX(390px)
+  }
+} 
+
